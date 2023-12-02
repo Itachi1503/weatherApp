@@ -1,0 +1,272 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    color: var(--colorLight2);
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tab-container {
+    width: 90%;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.tab {
+    padding: 5px 8px;
+    cursor: pointer;
+    letter-spacing: 1.75px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.user-weather-container {
+
+    margin-block: 4rem;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*grant location container*/
+.grant-location-container {
+    display: none;
+}
+
+
+
+.grant-location-container img {
+    margin-bottom: 32px;
+}
+
+.grant-location-container h2 {
+    font-size: 1.75rem;
+    font-weight: 600; 
+}
+
+.grant-location-container p {
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+}
+
+.grantAccess-btn  {
+    background-color: var(--colorDark2);
+    color: var(--colorLight2);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    cursor: pointer;
+    
+}
+
+
+
+/*loading screen*/
+.loading-container {
+    display: none;
+}
+
+
+.loading-container p{
+      text-transform: uppercase;
+}
+
+
+.user-info-container {
+   display: none;
+}
+
+
+
+
+
+.name {
+    display: flex;
+    gap: 0.05rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.name p {
+    font-size: 2rem;
+}
+
+.name img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+
+.user-info-container p[data-weatherDesc] {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.user-info-container img[data-weatherIcon] {
+    width: 90px;
+    height: 90px;
+}
+
+
+.user-info-container p[data-temp] {
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.parameter-container {
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 90%;
+}
+
+
+.parameter {
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+
+}
+.parameter img {
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:first-of-type {
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.parameter p:last-of-type {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.form-container {
+    display: none;
+    flex-direction: row;
+    width: 90%;
+    max-width: 550px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+
+
+.form-container input[data-searchInput] {
+    color: rgba(255, 255, 255, 0.7);
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 40px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+    border: none;
+}
+
+.form-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-container input:focus {
+    outline:   3px solid rgba(255, 255, 255, 0.7);
+}
+
+.form-container .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--colorDark2);
+}
+
+.not-found-container{
+    display: none;
+}
+
+.not-found-container img{
+      width: 250px;
+      height: 250px;
+}
+
+.active {
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .tab-container {
+        flex-direction: row;
+    }
+
+
+    .parameter-container {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
